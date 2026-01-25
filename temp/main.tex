@@ -1,0 +1,199 @@
+\documentclass[a4paper,11pt,oneside,top=3cm,bottom=3cm,left=3.5cm,right=3.5cm,openright,reqno,table]{book}
+
+\linespread{1.5}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+%Permette di usare l'opzione H per forzare una figura in un certo posto
+\usepackage{float}
+
+\usepackage{ltablex, ltablex, colortbl}
+\keepXColumns
+\definecolor{lightgray}{gray}{0.9}
+
+
+%Multiline comment
+\usepackage{verbatim}
+
+\usepackage{svg}
+
+% Carica immagini
+\usepackage{graphicx}
+
+\usepackage{url} % Pacchetto per gestire i link
+
+\usepackage{amsmath}
+\usepackage{amssymb} % Per utilizzare \mathbb{}
+\usepackage[utf8]{inputenc}
+
+% Pacchetti per la formattazione e la lingua
+\usepackage[utf8]{inputenc} % Codifica dei caratteri
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+
+% Pacchetti per la gestione delle immagini
+\usepackage{subcaption}
+
+% Pacchetto per i colori
+\usepackage{xcolor}
+
+% Pacchetti per migliorare la lettura e la struttura del documento
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage{indentfirst}
+
+% Pacchetto per link e riferimenti
+\usepackage{hyperref}
+\usepackage{bookmark} % Aggiunto pacchetto bookmark
+
+% Pacchetto per la bibliografia
+\usepackage{natbib} %Imports biblatex package
+
+% Impostazioni per le dimensioni e i margini della pagina
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm]{geometry}
+
+% Impostazioni per l'intestazione e il piè di pagina
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\nouppercase{\leftmark}}
+
+% Impostazioni per i titoli dei capitoli
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+
+% Impostazioni per lo stile del codice C
+\lstdefinestyle{C}{
+  language=C,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  tabsize=2,
+  extendedchars=true,
+  breaklines=true,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  commentstyle=\color{green},
+  rulecolor=\color{black},
+  xleftmargin=2em,
+  xrightmargin=2em,
+  aboveskip=1em,
+  showstringspaces=false
+}
+
+\lstdefinestyle{Go}{
+    language=Go,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    morecomment=[l][\color{magenta}]{\#},
+    stringstyle=\color{orange},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    tabsize=4,
+    breaklines=true,
+    breakatwhitespace=false,
+    morekeywords={struct, json}
+}
+
+\lstdefinestyle{bash}{
+    language=bash,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    numbersep=5pt,
+    tabsize=4,
+    breaklines=true,
+    breakatwhitespace=false,
+    morekeywords={ls, echo, cd, pwd, exit, if, then, else, fi, for, do, done}
+}
+
+\lstdefinestyle{Python}{
+  language=Python,
+  basicstyle=\ttfamily\small,
+  numbers=left,
+  numberstyle=\tiny,
+  numbersep=5pt,
+  tabsize=2,
+  extendedchars=true,
+  breaklines=true,
+  keywordstyle=\color{blue},
+  stringstyle=\color{red},
+  commentstyle=\color{green},
+  rulecolor=\color{black},
+  xleftmargin=2em,
+  xrightmargin=2em,
+  aboveskip=1em,
+  showstringspaces=false
+}
+
+
+\begin{document}
+
+% Pagina del titolo
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.3\textwidth]{logo_UNISA.png}\par\vspace{1cm}
+    {\scshape\LARGE Università degli Studi di Salerno\par}
+    \vspace{1cm}
+    {\scshape\Large Tesi di Laurea Triennale in Informatica\par}
+    \vspace{1.5cm}
+    {\huge\bfseries ANALISI E SVILUPPO DI UN MODERNO FILESYSTEM
+CRITTOGRAFICO TRASPARENTE PER LINUX: TCFS \par}
+    \vspace{2cm}
+    {\Large\itshape Carlo Alberto Giordano \\ matr. 0512110442\par}
+    \vfill
+    Relatore:\par
+    Prof.~Giuseppe \textsc{Cattaneo}
+    \vfill
+    % Data
+    {\large 21 Marzo 2024\par}
+\end{titlepage}
+
+\pagenumbering{roman}
+% Abstract
+\include{capitoli/abstract}
+% Sommario
+\include{capitoli/sommario}
+\pagenumbering{arabic}
+
+% Indici
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Impostazioni per il corpo del testo
+\setlength{\parindent}{1.5em}
+\onehalfspacing
+
+% Capitoli
+\include{capitoli/cenni_storici}
+
+\include{capitoli/Cos_è_TCFS_e_come_funziona}
+
+\include{capitoli/AES_usato_da_TCFS}
+
+\include{capitoli/Read&Write}
+
+\include{capitoli/Analisi_sicurezza_prestazioni}
+
+\include{capitoli/conclusioni}
+
+\include{capitoli/glossario}
+
+\include{capitoli/bibliografia.tex}
+
+\include{capitoli/dedica}
+
+
+\end{document}

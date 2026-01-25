@@ -1,0 +1,18 @@
+\chapter*{Sommario}
+\addcontentsline{toc}{chapter}{Sommario}
+
+Il presente lavoro di tesi si propone di analizzare e sviluppare un moderno filesystem crittografico trasparente per il sistema operativo Linux, con particolare attenzione al caso di studio di TCFS. Dopo una breve introduzione al tema e alla motivazione del lavoro, vengono esposti gli obiettivi della ricerca e la metodologia adottata.
+
+Il primo capitolo fornisce alcuni cenni storici su TCFS, esaminando il contesto storico nel quale è nato, la sua prima implementazione e i miglioramenti della nuova versione di TCFS. Si descrive in dettaglio il contesto storico e le motivazioni che hanno portato alla riscrittura totale di TCFS.
+
+Il secondo capitolo fornisce una definizione approfondita di TCFS, esaminandone le caratteristiche principali e il funzionamento. Si descrivono in dettaglio l'architettura del sistema, comprensiva del server REST, del key manager e del client, nonché l'interfaccia con FUSE. Vengono discussi i vantaggi e gli svantaggi di TCFS e le sfide ancora aperte.
+
+Il terzo capitolo approfondisce l'algoritmo di cifratura AES, utilizzato da TCFS per garantire la sicurezza dei dati. Si analizzano le caratteristiche di AES, il processo di cifratura e decifratura dei file, nonché l'integrazione di AES con TCFS, compresa la gestione delle chiavi e la verifica dell'integrità dei file.
+
+Nel quarto capitolo si analizza in dettaglio il processo di lettura e scrittura all'interno di TCFS, si scende in dettaglio e si guarda al codice che gestisce le operazioni di lettura e scrittura, insieme alle operazioni di generazione e gestione delle chiavi.
+
+Nel quinto capitolo, vengono valutate le prestazioni e la sicurezza di TCFS attraverso criteri e metodi di valutazione specifici. Si confronta TCFS con altri filesystem crittografici, si identificano possibili attacchi e si discutono le contromisure adottate. Infine, vengono presentati i risultati dell'analisi e le relative discussioni.
+
+Le conclusioni riassumono i risultati ottenuti, delineando i limiti del lavoro svolto e suggerendo possibili sviluppi futuri. Si offrono anche considerazioni personali e critiche sul processo di ricerca e sviluppo.
+
+Il presente documento si propone quindi di offrire una panoramica completa sull'analisi e lo sviluppo di TCFS come moderno filesystem crittografico trasparente per Linux, con riferimenti agli aspetti di sicurezza, prestazioni e sviluppi futuri.
