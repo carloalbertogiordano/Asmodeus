@@ -75,14 +75,14 @@ The interaction between the components can be visualized as follows:
     |-------------------------->|          |                         |               |
     |                           | 8. Reconstruct Key (off-chain)     |               |
     |                           |    Encrypt with RSA_pub_key        |               |
-    |                           |<-----------------------------------|               |
+    |                           |<---------|                         |               |
     |                           |          |                         |               |
     |                           | 9. Call submitProof()              |               |
-    |                           |------------------------------------>|               |
+    |--------------------------------------------------------------->|               |
     |                           | 10. Verify shares >= threshold,    |               |
     |                           |     Mark session closed            |               |
-    |<--------------------------|          |                         |<--------------|
-    | (Encrypted Secret Key)    | 11. Event: KeyReconstructed(ID)    |               |
+    |                           |          |                         |<--------------|
+    |                           | 11. Event: KeyReconstructed(ID)    |               |
     |                           |          |                         |               |
     |                           |          |                         |               |
     | Decrypt with RSA_priv_key |          |                         |               |
