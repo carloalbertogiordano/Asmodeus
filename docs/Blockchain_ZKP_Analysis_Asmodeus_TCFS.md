@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This document provides a critical examination of advanced cryptographic integration, addressing the complexities of Zero-Knowledge Proof (ZKP) implementation within a system like Asmodeus for verifiable key reconstruction. Furthermore, it offers detailed solutions to the identified limitations of the current Asmodeus architecture. A significant portion of this analysis is dedicated to rigorously evaluating the actual utility and appropriateness of blockchain technology in the Asmodeus/TCFS context, scrutinizing its benefits against its inherent complexities and costs, particularly from a perspective questioning its fundamental necessity. The aim is to present a comprehensive, academic, and formal assessment of these sophisticated components.
+This document provides a critical examination of advanced cryptographic integration, addressing the complexities of Zero-Knowledge Proof (ZKP) implementation within a system like Asmodeus for verifiable key reconstruction. Furthermore, it offers detailed solutions to the identified limitations of the current Asmodeus architecture. A significant portion of this analysis is dedicated to rigorously evaluating the actual utility and appropriateness of blockchain technology in the Asmodeus/TCFS context, scrutinizing its benefits against its inherent complexities and costs, particularly from a perspective questioning its fundamental necessity.
 
 ## 1. Challenges in Integrating Zero-Knowledge Proofs (ZKPs) for Key Reconstruction
 

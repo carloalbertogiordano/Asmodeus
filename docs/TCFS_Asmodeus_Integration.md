@@ -19,7 +19,7 @@ Asmodeus operates as a hybrid off-chain/on-chain system, orchestrating cryptogra
 1.  **Client Initialization:** The process begins with a client application, which may be part of a larger TCFS client. The client generates a temporary RSA key pair, where the public key will be used for encrypting the reconstructed secret. It then initiates communication with the Asmodeus FastAPI server.
 
 2.  **Session Preparation (`/prepare` endpoint):**
-    *   The client sends a request to the FastAPI server's `/prepare` endpoint, specifying the `threshold` (the minimum number of shares required for reconstruction) and the total number of shares to be generated (though in the current implementation, shares are assumed to be pre-distributed and directly submitted).
+    *   The client sends a request to the FastAPI server's `/prepare` endpoint, specifying the `threshold` (the minimum number of shares required for reconstruction).
     *   The FastAPI server generates a globally unique `session_id` to identify the reconstruction session.
     *   Critically, the FastAPI server then interacts with the deployed Ethereum Smart Contract, invoking its `prepare` function. This transaction registers the `session_id` and the specified `threshold` on-chain, establishing a public, immutable record of the session's parameters.
     *   The FastAPI server responds to the client with the newly generated `session_id`, its own network address (for subsequent interactions), and a cryptographic `challenge` (e.g., a nonce or session-specific data).

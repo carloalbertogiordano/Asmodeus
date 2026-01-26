@@ -41,7 +41,6 @@ This document outlines the current status of the project, detailing the implemen
         - `/submit-proof` call and successful on-chain proof submission.
     - The test environment now correctly uses `httpx.AsyncClient` for asynchronous requests.
     - Test setup addresses `secret-sharing` library's character set requirements.
-    - The test output now includes **colored messages for improved readability**.
 
 ## Unimplemented Features & Potential Improvements
 
