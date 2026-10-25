@@ -41,7 +41,7 @@ Follow these steps to set up and run the project locally.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/Asmodeus.git # Replace with actual repo URL
+git clone https://github.com/carloalbertogiordano/Asmodeus.git
 cd Asmodeus
 ```
 
